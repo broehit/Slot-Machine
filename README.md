@@ -1,4 +1,4 @@
-# Neon Slots
+# Slot Machine
 
 A vibrant, web-based slot machine game featuring neon aesthetics and classic slot mechanics.
 
