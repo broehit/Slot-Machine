@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Slots</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>SLOT MACHINE</h1>
+        </header>
+        
+        <main>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">Balance</span>
+                    <span class="stat-value" id="balance-display">$0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Winnings</span>
+                    <span class="stat-value" id="winnings-display">$0</span>
+                </div>
+            </div>
+
+            <div class="slots-container">
+                <div class="reel-col">
+                    <div class="reel-window">
+                        <div class="reel-strip" id="reel-1">
+                            <div class="symbol">A</div>
+                            <div class="symbol">B</div>
+                            <div class="symbol">C</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reel-col">
+                    <div class="reel-window">
+                        <div class="reel-strip" id="reel-2">
+                            <div class="symbol">A</div>
+                            <div class="symbol">B</div>
+                            <div class="symbol">C</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reel-col">
+                    <div class="reel-window">
+                        <div class="reel-strip" id="reel-3">
+                            <div class="symbol">A</div>
+                            <div class="symbol">B</div>
+                            <div class="symbol">C</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payline-overlay">
+                    <!-- Lines will be dynamically visualized here if needed, or handled via CSS borders/overlays -->
+                </div>
+            </div>
+
+            <div class="message-area">
+                <p id="game-message">Deposit money to start!</p>
+            </div>
+
+            <div class="controls-area">
+                <!-- Deposit Section -->
+                <div id="deposit-section" class="control-group">
+                    <input type="number" id="deposit-amount" placeholder="Amount" min="1">
+                    <button id="deposit-btn" class="btn primary">DEPOSIT</button>
+                </div>
+
+                <!-- Betting Section -->
+                <div id="betting-section" class="control-group hidden">
+                    <div class="input-wrap">
+                        <label for="lines">Lines (1-3)</label>
+                        <input type="number" id="lines" value="1" min="1" max="3">
+                    </div>
+                    
+                    <div class="input-wrap">
+                        <label for="bet">Bet per Line</label>
+                        <input type="number" id="bet" value="5" min="1">
+                    </div>
+
+                    <button id="spin-btn" class="btn action">SPIN</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
